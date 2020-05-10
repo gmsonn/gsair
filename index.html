@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIRGS - Aluguéis por Temporada, Acomodações, Experiências e Lugares</title>
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet"> 
+</head>
+<body>
+
+    <header>
+        <div class="container-flex">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/img/logo.png" alt="AirGS">
+                </a>
+            </div>
+            <ul class="nav">
+                <li class="filtros">
+                    Aprimore sua busca:
+                </li>
+                <li id="estados" class="dropdown">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"/></svg>
+                    Escolha o estado!
+                    <ul>
+                    </ul>
+                </li>
+                <li id="cidades" class="dropdown">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path d="M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4s4-1.79 4-4s-1.79-4-4-4zm8.94 3A8.994 8.994 0 0 0 13 3.06V1h-2v2.06A8.994 8.994 0 0 0 3.06 11H1v2h2.06A8.994 8.994 0 0 0 11 20.94V23h2v-2.06A8.994 8.994 0 0 0 20.94 13H23v-2h-2.06zM12 19c-3.87 0-7-3.13-7-7s3.13-7 7-7s7 3.13 7 7s-3.13 7-7 7z"/></svg>
+                    Escolha a cidade!
+                    <ul>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="index">
+        <div class="container-flex">
+            <h1 class="section-title">
+                Confira alguns imóveis seprados especialmente para você!
+            </h1>
+            <div class="title-assets">
+                <h2>Heeeey, Precisa de ajuda?</h2>
+                <p>Está com alguma dificuldade em nosso site? Nossa equipe está aqui para ajudar você!</p>
+                <a href="https://br.linkedin.com/in/gmsonn" target="_blank">
+                    <button>Preciso de ajuda!</button>
+                </a>
+            </div>            
+        </div>
+    </section>
+
+    <section class="mosaic index">
+        <div class="container-flex">
+            <div class="destaque" style="background-image: url(https://a0.muscache.com/im/pictures/e6c4b347-49c7-4840-8c00-df36a2a273da.jpg?aki_policy=x_large);">
+                <div class="mosaic-footer">
+                    <h3>Bonito penthouse cerca del aeropuerto CDMX</h3>
+                </div>
+            </div>
+            <div class="outros">
+                <div class="container-flex-fluid">
+                    <div class="mosaic-half half1" style="background-image: url(https://a0.muscache.com/im/pictures/e6c4b347-49c7-4840-8c00-df36a2a273da.jpg?aki_policy=x_large);">
+                        <div class="mosaic-footer">
+                            <h3>Bonito penthouse cerca del aeropuerto CDMX</h3>
+                        </div>
+                    </div>
+                    <div class="mosaic-half half2" style="background-image: url(https://a0.muscache.com/im/pictures/e6c4b347-49c7-4840-8c00-df36a2a273da.jpg?aki_policy=x_large);">                        
+                        <div class="mosaic-footer">
+                            <h3>Bonito penthouse cerca del aeropuerto CDMX</h3>
+                        </div>                        
+                    </div>
+                </div>
+                <div class="container-fluid">
+                    <div class="mosaic-half-full full" style="background-image: url(https://a0.muscache.com/im/pictures/e6c4b347-49c7-4840-8c00-df36a2a273da.jpg?aki_policy=x_large);">
+
+                        <div class="mosaic-footer">
+                            <h3>Bonito penthouse cerca del aeropuerto CDMX</h3>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="index">
+        <div class="container-flex">
+            <div class="title-assets">
+                <h2>Não achou nada de interessante?</h2>
+                <p>Utilize nossos filtros de busca no topo do site e refine a busca para encontrar exatamente o que você está procurando!</p>
+            </div>            
+            <h2 class="section-title">
+                Confira abaixo outros imóveis da Airgs em destaque!
+            </h2>
+        </div>
+    </section>
+
+    <section class="index">
+
+        <div id="listHome" class="container-flex wrap-cards">
+            
+        </div>
+
+        <div class="container">
+            <button id="loadMore" onclick="loadMore()">Carregar mais imóveis</button>
+            <h3 id="no-results">Não existem mais resultados, mas você ainda pode usar os filtros para refinar a sua pesquisa!</h3>
+        </div>    
+
+    </section>
+
+
+    <section class="search-header do-search">
+        <div class="container-flex">
+            <h1 class="section-title">
+                Imóveis baseados em sua busca!
+            </h1>
+            <div class="title-assets">
+                <h2>Sua busca ficou legal?</h2>
+                <p>Lembre-se, você pode limpar os filtros de busca clicando no botão abaixo!</p>
+                <button onclick="unsetSearch()">Limpar filtros</button>
+            </div>            
+        </div>
+    </section>    
+
+    <section class="do-search">
+
+        <div id="listSearch" class="container-flex wrap-cards">
+            
+        </div>
+
+    </section>    
+
+    <footer>
+        <div class="container">
+            <p>Giovanni Sonnberger 2020 - Site feito para o curso da Gama Academy</p>
+        </div>
+    </footer>
+
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div class="container-flex">
+              <div class="modal-img">
+                  <img src="https://a0.muscache.com/im/pictures/e6c4b347-49c7-4840-8c00-df36a2a273da.jpg?aki_policy=x_large" alt="">
+              </div>
+              <div class="modal-info">
+                  <h4>Nome do imóvel</h4>
+                  <ul>
+                      <li>Estado do imóvel: <span id="im-estado">Casa bem grande</span></li>
+                      <li>Cidade do imóvel: <span id="im-cidade">Casa bem grande</span></li>
+                      <li>Tipo do imóvel: <span id="im-tipo">Casa bem grande</span></li>
+                      <li>Valor da diária: <span id="im-valor">Casa bem grande</span></li>
+                    </ul>
+                  <h5>Calcule o valor baseado na sua estadia!</h5>
+
+                  <input type="hidden" id="price-raw">
+                  <div class="container-flex-fluid calculo-estadia">
+                      <input id="dayPrice" type="number" min="1" step="1" value="1" onchange="dayPrice()">
+                      <p>Dia(s) = <span id="calc-result"></span></p>
+                  </div>
+
+                  <a href="https://br.linkedin.com/in/gmsonn" target="_blank">
+                    <button>Clique aqui para alugar agora mesmo!</button>
+                  </a>
+
+                  <p></p>
+              </div>
+          </div>
+        </div>
+      
+    </div>
+
+    <div class="modal-load"></div>
+      
+    <script src="assets/js/custom.js"></script>  
+
+</body>
+</html>

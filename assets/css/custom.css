@@ -1,0 +1,375 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+    line-height: 1;
+    font-family: 'Roboto', sans-serif;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*GENECRIC*/
+.container-flex{
+    max-width: 1200px;
+    margin:0 auto;
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+}
+.container-flex-fluid{
+    max-width: 1200px;
+    margin:0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.container{
+    max-width: 1200px;
+    margin:0 auto;
+    padding: 10px;
+}
+.container-fluid{
+    max-width: 1200px;
+    margin-left: 10px;
+}
+.section-title, .modal h3{
+    font-size: 35px;
+    width: 50%;
+    color: #333;
+    line-height: 40px;
+    font-weight: bold;
+}
+.title-assets{
+    width: 40%;
+}
+.title-assets h2{
+    color: #666;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 20px;
+}
+.title-assets p{
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+button{
+    background-color: #333;
+    padding:10px;
+    color: #fff;
+    border: 0;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+section{
+    margin: 0 0 50px 0;
+}
+section:first-of-type{
+    padding-top: 110px;
+}
+
+.search-header{
+    padding-top: 110px;
+}
+#listSearch{
+    min-height: 700px;
+}
+/*HEADER*/
+header{
+    background-color: #333333;
+    position: fixed;
+    width: 100%;
+    z-index: 9;
+    border-bottom: 3px solid #fff;
+}
+.logo img{
+    width: 130px;
+}
+.nav li{
+    display: inline-block;
+    padding: 10px 10px 10px 30px;
+    color: #ffffff;
+    margin-top: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    position: relative;
+}
+.nav li svg{
+    fill: #ffffff;
+   position: absolute; 
+   margin-left: -20px;
+   width: 15px;
+   height: 15px;
+}
+.nav li.filtros{
+    text-transform: uppercase;
+    color: #999;
+    cursor: unset;
+    font-style: italic;
+    font-size: 10px;
+}
+.nav li ul{
+    position: absolute;
+    background-color: #333333;
+    width: 100%;
+    padding-top: 20px;
+    border-radius: 10px;
+    display: none;
+}
+.nav li ul li{
+    display: block;
+    padding: 5px 5px 10px 5px;
+    list-style-type: square;
+    border-bottom: 1px solid #666;
+    width: 90%;
+}
+.nav li ul li:last-child{
+    border: 0;
+}
+
+.nav li ul li::before {
+    content: "\2022"; 
+    color: #ffffff; 
+    font-weight: bold; 
+    display: inline-block;
+    width: 5px;
+    margin: 0 10px;
+}
+.dropdown:hover ul{
+    display: block;
+}
+.nav li ul li:hover:before{
+    color:#999;
+}
+
+#cidades{
+    display: none;
+}
+
+#tipos{
+    display: none;
+}
+
+
+/*MOSAIC*/
+.mosaic > div{
+    cursor: pointer;
+}
+.mosaic .destaque{
+    width: 50%;
+    height: 500px;
+    position: relative;
+    border-radius: 10px;
+    background-size: cover;
+}
+.mosaic .outros{
+    width: 50%;
+}
+.mosaic-half{
+    width: 100%;
+    margin: 0 0 0 10px;
+    height: 250px;
+    position: relative;
+    border-radius: 10px;
+    background-size: cover;
+    cursor: pointer;
+}
+.mosaic-half-full{
+    width: 100%;
+    background-size: cover;
+    margin: 20px 0 0 0;
+    height: 230px;
+    position: relative;
+    background-position: bottom;
+    border-radius: 10px;
+}
+.mosaic-footer{
+    background-color: #333;
+    color: #fff;
+    position: absolute;
+    width: 100%;
+    bottom: -8px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+}
+.mosaic-footer h3{
+    padding: 20px;
+    font-weight: bold;
+    font-size: 16px;
+}
+.mosaic-half .mosaic-footer h3{
+    font-size: 12px;
+    line-height: 16px;
+}
+.wrap-cards{
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.wrap-cards .mosaic-half{
+    width: 23%;
+    margin: 0 10px 30px 10px;
+}
+
+#loadMore{
+    display: block;
+    margin: 0 auto;
+    font-size: 20px;
+}
+
+#no-results{
+    width: 40%;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    display: none;
+}
+
+.do-search{
+    display: none;
+}
+
+/*FOOTER*/
+footer{
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+    background-color: #333;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/*MODAL*/
+.modal-load {
+    position: fixed;
+    z-index: 9999; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.8);
+}
+
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 99999; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.8);
+}
+  
+.modal-content {
+background-color: #fefefe;
+margin: 8% auto; 
+padding: 20px;
+width: 50%;
+border-radius: 20px;
+}
+
+
+.close {
+color: #aaa;
+float: right;
+font-size: 28px;
+font-weight: bold;
+margin-top: -5px;
+}
+
+.close:hover,
+.close:focus {
+color: black;
+text-decoration: none;
+cursor: pointer;
+}
+
+.modal-img{
+    width: 50%;
+}
+.modal-img img{
+    max-width: 100%;
+}
+.modal-info{
+    width: 48%;
+}
+
+.modal h4{
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+.modal li{
+    color: #666;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px 0;
+}
+.modal li span{
+    font-weight: 500;
+}
+.modal h5{
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color:#333;
+    margin-bottom: 10px;
+}
+.calculo-estadia{
+    justify-content: start;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.calculo-estadia input{
+    border: 1px solid #666;
+    padding: 10px;
+    width: 50px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
